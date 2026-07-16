@@ -15,6 +15,7 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
+        <div class="section-divider"></div>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
@@ -23,6 +24,7 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <div class="section-divider"></div>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -38,6 +40,26 @@
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="fortune-container">
+        <h3>Daily Fortune (Omikuji)</h3>
+        <div class="section-divider fortune-divider"></div>
+        <div class="fortune-content">
+          <p class="fortune-intro">Tap below to reveal your fortune for today.</p>
+          <button id="fortune-button" type="button">Reveal Fortune</button>
+          <div id="fortune-result" class="fortune-result hidden">Your fortune will appear here.</div>
+        </div>
+        <div class="section-divider fuel-divider"></div>
+      </section>
+
+      <section id="fuel-container">
+        <h3>Fuel Checker</h3>
+        <div class="section-divider fuel-divider"></div>
+        <div id="fuel-buttons" class="fuel-buttons" aria-label="Fuel selector"></div>
+        <div id="fuel-trends" class="fuel-trends">
+          <p>Loading fuel trends...</p>
+        </div>
       </section>
     </main>
 

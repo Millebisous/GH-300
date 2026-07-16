@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  text-align: center;
+  text-align: left;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -33,6 +33,7 @@ main {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -48,13 +49,32 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  text-align: center;
 }
 
 section h3 {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
   color: #1a237e;
+  text-align: left;
+}
+
+#fortune-container h3 {
+  text-align: center;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, #1a237e 0%, #c7d7ff 100%);
+  margin: 0 0 18px;
+}
+
+.fortune-divider {
+  background: linear-gradient(90deg, #0066cc 0%, #9ec5fe 100%);
+}
+
+.fuel-divider {
+  background: linear-gradient(90deg, #ff8a00 0%, #ffd166 100%);
 }
 
 .activity-card {
@@ -159,6 +179,118 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.fortune-content {
+  display: grid;
+  gap: 12px;
+}
+
+.fortune-intro {
+  color: #4a4a4a;
+}
+
+.fortune-result {
+  margin-top: 4px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.fortune-result.lucky {
+  background: #e8f5e9;
+  border: 1px solid #81c784;
+  color: #1b5e20;
+}
+
+.fortune-result.neutral {
+  background: #fff8e1;
+  border: 1px solid #f0c36d;
+  color: #6a4d00;
+}
+
+.fuel-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fuel-button {
+  background: #fff7ed;
+  color: #9a5b00;
+  border: 1px solid #f5c98b;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.fuel-button.active {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.fuel-trends {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+
+.fuel-card {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fffaf2;
+}
+
+.fuel-title {
+  margin-bottom: 8px;
+  color: #b45309;
+}
+
+.fuel-line-chart {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #f5d3a1;
+  border-radius: 6px;
+}
+
+.fuel-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #5f4b3d;
+  font-size: 0.95rem;
+}
+
+.fuel-prediction {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #8a4b00;
+}
+
+.fuel-trend {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.fuel-month {
+  padding: 8px 6px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #f5d3a1;
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+.fuel-month strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.7rem;
+  color: #8a4b00;
 }
 
 .message {
